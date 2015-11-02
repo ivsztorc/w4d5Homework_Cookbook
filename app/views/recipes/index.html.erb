@@ -1,0 +1,17 @@
+<table>
+<h1>Recipes List</h1>
+<tr>
+<th>Name</th>
+<th>Show</th>
+<th>Edit</th>
+<th>Delete</th>
+</tr>
+<% @recipes.each do |recipe| %>
+<tr> 
+<td><%= recipe.name %></td>
+<td><%= link_to("Show #{recipe.name}", recipe_path(recipe)) %></td>
+<td><%= link_to('Edit recipe', edit_recipe_path(recipe)) %></td>
+<td><%= button_to('Delete recipe', recipe_path(recipe), method: :delete, data:{confirm: 'Delete them? Are you sure?'}) %></td>
+</tr>
+<% end %>
+</table>

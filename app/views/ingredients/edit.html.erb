@@ -1,0 +1,13 @@
+<%= form_for @ingredient do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br>
+  <br>
+  <%= f.label :ingredient_id %>
+  <%= f.collection_select :ingredient_id, ingredient.order(:name),:id,:name, include_blank: true %>
+  <br>
+  <%= f.submit 'Update' %>
+  <% end %>
+
+  <%#= link_to 'Show', @ingredient %> |
+  <%#= link_to 'Back', categories_path %>

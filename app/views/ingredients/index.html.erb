@@ -1,0 +1,17 @@
+<table>
+<h1>Ingredients List</h1>
+<tr>
+<th>Name</th>
+<th>Show</th>
+<th>Edit</th>
+<th>Delete</th>
+</tr>
+<% @ingredients.each do |ingredient| %>
+<tr> 
+<td><%= ingredient.name %></td>
+<td><%= link_to("Show #{ingredient.name}", ingredient_path(ingredient)) %></td>
+<td><%= link_to('Edit ingredient', edit_ingredient_path(ingredient)) %></td>
+<td><%= button_to('Delete ingredient', ingredient_path(ingredient), method: :delete, data:{confirm: 'Delete them? Are you sure?'}) %></td>
+</tr>
+<% end %>
+</table>
