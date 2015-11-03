@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
-  resources :categories, :recipes, :ingredients
+  resources :categories 
+  resources :recipes 
+  resources :ingredients
+  resources :quantities
   
-  root to: 'categories#index'
-  
+  root 'categories#index'
+   
 
 
 

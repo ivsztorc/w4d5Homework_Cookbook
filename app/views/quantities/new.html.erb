@@ -1,0 +1,12 @@
+<%#= form_for @quantity do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br>
+  <br>
+  <%= f.label :quantity_id %>
+  <%#= f.collection_select :quantity_id, Quantity.order(:name),:id,:name, include_blank: true %>
+  <br>
+  <%= f.submit 'New' %>
+  <% end %>
+
+

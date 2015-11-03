@@ -4,7 +4,7 @@
   <br>
   <br>
   <%= f.label :ingredient_id %>
-  <%= f.collection_select :ingredient_id, Ingredient.order(:name),:id,:name, include_blank: true %>
+  <%#= f.collection_select :ingredient_id, Ingredient.order(:name),:id,:name, include_blank: true %>
   <br>
   <%= f.submit 'Update' %>
   <% end %>
